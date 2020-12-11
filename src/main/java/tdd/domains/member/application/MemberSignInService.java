@@ -1,5 +1,6 @@
 package tdd.domains.member.application;
 
+import javax.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ public class MemberSignInService {
 
   private final MemberRepository memberRepository;
 
+  @Transactional
   public ResponseEntity<MemberInfoResponse> signIn(MemberInfoRequest memberInfoRequest) {
     MemberEntity memberEntity =
         MemberEntity.builder()

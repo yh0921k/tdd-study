@@ -12,4 +12,9 @@ import lombok.NoArgsConstructor;
 @Getter
 public class MemberInfoResponse {
   private Long id;
+  private String email;
+  private String password;
+
+  private String name;
+  private int age;
 }
